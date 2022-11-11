@@ -50,7 +50,8 @@ namespace ConfigTestConsoleApp
         }
         private void OnTimer(object sender, System.Timers.ElapsedEventArgs e)
         {
-            bool enabled = _functionsHostingConfig.Value.SomeFeatureEnabled;
+            bool enabled1 = _functionsHostingConfig.Value.SomeFeatureEnabled;
+            bool enabled2 = _monitor.CurrentValue.SomeFeatureEnabled;
             _timer.Start();
         }
     }
