@@ -21,11 +21,14 @@ namespace ConfigTestConsoleApp
             })
             .ConfigureServices((context, services) =>
             {
+                var separateConfig = new ConfigurationBuilder()
+                    .AddFunctionsHostingConfig()
+                    .Build();
+
                 services.AddHostedService<SampleHostingService>();
 
                 services.ConfigureOptions<FunctionsHostingConfigOptionsSetup>();
-                services.Configure<FunctionsHostingConfig>(context.Configuration);
-
+                services.Configure<FunctionsHostingConfig>(separateConfig);
             });
 
             return builder;

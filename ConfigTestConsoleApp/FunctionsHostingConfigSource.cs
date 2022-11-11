@@ -15,7 +15,7 @@ namespace ConfigTestConsoleApp
         /// <returns>A <see cref="FunctionsHostingConfigProvider"/></returns>
         public override IConfigurationProvider Build(IConfigurationBuilder builder)
         {            
-            Path = "C://Temp//Config//config.txt";
+            Path = "config.txt";
             Optional = true;
             ReloadOnChange = true;
             ResolveFileProvider();

@@ -10,8 +10,6 @@ namespace ConfigTestConsoleApp
     /// </summary>
     public class FunctionsHostingConfigProvider : FileConfigurationProvider
     {
-        private readonly string _filePath = "config.txt";
-
         /// <summary>
         /// Initializes a new instance with the specified source.
         /// </summary>
